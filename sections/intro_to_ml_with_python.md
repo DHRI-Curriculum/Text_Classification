@@ -1,6 +1,6 @@
 
 # Introduction to Machine Learning with scikit-learn
-### Rachel Rakov & Hannah Aizenman
+
 Welcome!  In this workshop, we are going to learn how to go through the process of doing *machine learning* on a set of data.   To do so, we will download a *corpus* of text data to work with, extract *features* from this data, and do *supervised* machine learning to our data, using a mathmatical algorithm to train a *classifier* which will then classify previously unseen data into a set of predefined categories.
 
 
