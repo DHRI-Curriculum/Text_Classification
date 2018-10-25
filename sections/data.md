@@ -1,6 +1,6 @@
 [<<< Previous](classification.md) | [Next >>>](features.md)
 
-## Getting Our Data
+# Getting Our Data
 
 Let's get to coding!
 
@@ -34,7 +34,7 @@ for cat in brown.categories():
     science_fiction
     
 
-#### Get the sentences from each corpus
+## Get the sentences from each corpus
 
 
 ```python
@@ -42,7 +42,7 @@ news_sent = brown.sents(categories=["news"])
 romance_sent = brown.sents(categories=["romance"])
 ```
 
-#### Take a look at the first 5 sentences in each corpus 
+## Take a look at the first 5 sentences in each corpus 
 
 
 ```python
@@ -57,7 +57,7 @@ print (romance_sent[:5])
     [['They', 'neither', 'liked', 'nor', 'disliked', 'the', 'Old', 'Man', '.'], ['To', 'them', 'he', 'could', 'have', 'been', 'the', 'broken', 'bell', 'in', 'the', 'church', 'tower', 'which', 'rang', 'before', 'and', 'after', 'Mass', ',', 'and', 'at', 'noon', ',', 'and', 'at', 'six', 'each', 'evening', '--', 'its', 'tone', ',', 'repetitive', ',', 'monotonous', ',', 'never', 'breaking', 'the', 'boredom', 'of', 'the', 'streets', '.'], ['The', 'Old', 'Man', 'was', 'unimportant', '.'], ['Yet', 'if', 'he', 'were', 'not', 'there', ',', 'they', 'would', 'have', 'missed', 'him', ',', 'as', 'they', 'would', 'have', 'missed', 'the', 'sounds', 'of', 'bees', 'buzzing', 'against', 'the', 'screen', 'door', 'in', 'early', 'June', ';', ';'], ['or', 'the', 'smell', 'of', 'thick', 'tomato', 'paste', '--', 'the', 'ripe', 'smell', 'that', 'was', 'both', 'sweet', 'and', 'sour', '--', 'rising', 'up', 'from', 'aluminum', 'trays', 'wrapped', 'in', 'fly-dotted', 'cheesecloth', '.']]
     
 
-### What do you notice about the format of the data above?
+## What do you notice about the format of the data above?
 Each sentence is already *tokenized*—split into a series of word and punctuation strings, with whitespace removed. This saves us the time of having to do all of this work ourselves!
 
 To start to organize our data, let's put these sentences into a pandas *DataFrame*, an object which has a format very similar to an Excel spreadsheet.  We will first make two spread sheets (one for news, and one for romance), and then combine them into one.  We will also add the category each sentences came from, which will be our *labels* for each sentence and its associated feature representation (which we will build ourselves).
