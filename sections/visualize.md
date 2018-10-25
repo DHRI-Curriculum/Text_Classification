@@ -27,7 +27,7 @@ We can make a scatter plot of our data colored by label to see if the patterns o
 
 
 ```python
-# seperate our data into the two classes
+# separate our data into the two classes
 news = df[df['label']=='news']
 romance = df[df['label']=='romance']
 
