@@ -42,6 +42,7 @@ sklearn!](sections/supervised_classification.md)
 
 Session leaders: Rachel Rakov and Hannah Aizenman  
 Based on previous work by: Rachel Rakov and Hannah Aizenman 
+Acknowledgments: Much gratitude to Kelsey Chatlosh, Lisa Rhody, and Micheal Grossberg for substantive feedback that worked its way into content.
 
 [![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/)
 
