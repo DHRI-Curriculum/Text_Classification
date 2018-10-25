@@ -1,10 +1,10 @@
 [<<< Previous](unsupervised.md) | [Next >>>](lda.md)
 
-## Feature Extraction Using Bag of Words
+# Feature Extraction Using Bag of Words
 
 We're almost ready to do some machine learning!  First, we need to turn our sentences into the type of *feature vectors* the algorithm we plan to work with expects. Jumping ahead a bit, the `Sklearn` implementation of the algorithm we will use for unsupervised learning requires that the text be in *bag of words* form, which is the unique words in the text and the count of occurances of that word. 
 
-### Read data in from a spreadsheet
+## Read data in from a spreadsheet
 Let's take the data we just saved out and load it back into a dataframe so that we can do some analysis with it!
 
 ```python
@@ -79,7 +79,7 @@ df['sentence'].head()
 
 
 
-### Bag of Words
+## Bag of Words
 We preprocess our data using sklearn's text feature extraction tools. In particular, we use the `CountVectorizer` which computes the frequency of each token in the document. We can strip out *stop words* (words that are so common they don't add to the data analysis, such as "the" and "a") using the `stop_words` keyword argument. A keyword argument is an optional function parameter. 
 
 
