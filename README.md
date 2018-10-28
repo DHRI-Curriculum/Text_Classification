@@ -15,7 +15,7 @@ In this workshop, you will learn the following skills:
 
 This workshop will review key concepts for understanding how machine learning works, and walk participants through the process of analyzing data using statistical and machine learning methods. 
 
-_Much gratitude to Kelsey Chatlosh, Lisa Rhody, and Micheal Grossberg for substantive feedback that worked its way into content._
+_Much gratitude to Kelsey Chatlosh, Lisa Rhody, and Michael Grossberg for substantive feedback that worked its way into content._
 
 [Get Started >>>](sections/introduction.md)
 
