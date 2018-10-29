@@ -1,6 +1,6 @@
 [<<< Previous](supervised.md) | [Next >>>](bag_of_words.md)
 
-# How does unsupervised machine learning work?
+# Unsupervised Machine Learning
 
 In supervised machine learning tasks, the data is assigned to some set of classes. For example, here we are given a dataset wherein each observation is a set of physical attributes of an object. In an supervised task, the object column acts as the labels. The algorithm then uses these existing separations in the data to develop criteria for classifying unknown observations in the data. 
 
