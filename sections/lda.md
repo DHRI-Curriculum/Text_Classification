@@ -1,7 +1,7 @@
 [<<< Previous](bag_of_words.md) | [Next >>>](review.md)
 
 
-## Topic Modeling Using LDA
+# Topic Modeling Using LDA
 
 ![diagram showing a collection of texts then an arrow going towards a black box named LDA. On the other side of the black box are two arrows. One is slightly tilted up and points toward three circles. Each circle is a topic and contains a sample of words in that topic. The other arrow is slightly titled down and points towards a document. In the document, words are annotated to indicate which topic they belong to (if any)](../images/lda_diagram.png)
 
