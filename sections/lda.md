@@ -9,7 +9,7 @@ One subset of unsupervised learning tasks are topic extraction tasks, where the 
 
 In broad strokes, LDA extracts hidden (latent) topics via the following steps:<sup>1, 2</sup>
 
-1. Arbitrarily decide that there are 10 topics
+1. Arbitrarily decide that there are 10 topics.
 2. Select one document and randomly assign each word in the document to one of the 10 topics. 
 3. Repeat step 2 for all the other documents. This results in the same word being assigned to multiple topics.
 4. Compute
