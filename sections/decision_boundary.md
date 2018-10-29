@@ -1,4 +1,4 @@
-Appendix: Visualize the Decision Boundary
+Appendix: Visualizing the Decision Boundary
 ================================
 
 This appendix walks through the decision boundary visualizations found in the discussion of [supervised_classification](supervised_classification.md)
