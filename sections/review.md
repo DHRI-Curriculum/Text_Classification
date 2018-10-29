@@ -1,5 +1,6 @@
 [<<< Previous](lda.md) |  [Next >>>](resources.md)
-# Workshop Debrief
+
+# Review
 
 At the end of this workshop, we have covered the following skills:
 - How to use skills from the NLTK workshop to build features for a classification task
