@@ -30,13 +30,10 @@ This workshop will review key concepts for understanding how machine learning wo
 [Unsupervised Machine Learning](sections/unsupervised.md)  
 [Feature Extraction Using Bag of Words](sections/bag_of_words.md)  
 [Review](sections/review.md)  
-[Resources](sections/resources.md)  
-
+[Resources](sections/resources.md)
 [Appendix: Visualization](sections/visualize.md)
-
 [Appendix: Visualizing the Decision Boundary](sections/decision_boundary.md)  
 [Appendix: Topic Modeling with Latent Dirchlet Allocation (LDA)](sections/lda.md)
-
 [Appendix: Creating a Word Cloud](sections/word_cloud.md)
 
 
