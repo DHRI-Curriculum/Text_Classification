@@ -1,4 +1,4 @@
-[<<< Previous](data.md) | [Next >>>](visualize.md)
+[<<< Previous](data.md) | [Next >>>](supervised.md)
 
 # Extracting Features
 
