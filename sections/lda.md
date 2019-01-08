@@ -1,4 +1,4 @@
-[<<< Previous](bag_of_words.md) | [Next >>>](review.md)
+[Back to beginning >>>](../README.md)
 
 
 # Topic Modeling with Latent Dirchlet Allocation (LDA)
