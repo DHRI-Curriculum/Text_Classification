@@ -1,4 +1,4 @@
-[<<< Previous](supervised.md) | [Next >>>](bag_of_words.md)
+[<<< Previous](supervised.md) | [Next >>>](review.md)
 
 # Unsupervised Machine Learning
 
