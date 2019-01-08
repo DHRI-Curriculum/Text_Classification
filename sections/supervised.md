@@ -1,4 +1,4 @@
-[<<< Previous](visualize.md) | [Next >>>](supervised_classification.md)
+[<<< Previous](features.md) | [Next >>>](supervised_classification.md)
 
 # Supervised Machine Learning
 
