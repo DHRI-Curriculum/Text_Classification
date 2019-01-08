@@ -1,4 +1,4 @@
-[<<< Previous](features.md) | [Next >>>](supervised.md)
+[<<< Previous](resources.md) | [Back to beginning >>>](../README.md)
 
 # Visualization
 
