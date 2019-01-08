@@ -28,7 +28,6 @@ This workshop will review key concepts for understanding how machine learning wo
 [Supervised Machine Learning](sections/supervised.md)  
 [Supervised Classification Algorithm with sklearn](sections/supervised_classification.md)  
 [Unsupervised Machine Learning](sections/unsupervised.md)  
-  
 [Review](sections/review.md)  
 [Resources](sections/resources.md)
 
