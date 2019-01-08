@@ -25,16 +25,17 @@ This workshop will review key concepts for understanding how machine learning wo
 [What Is Classification?](sections/classification.md)  
 [Getting Our Data](sections/data.md)  
 [Extracting Features](sections/features.md)  
-[Visualization](sections/visualize.md)  
 [Supervised Machine Learning](sections/supervised.md)  
 [Supervised Classification Algorithm with sklearn](sections/supervised_classification.md)  
 [Unsupervised Machine Learning](sections/unsupervised.md)  
 [Feature Extraction Using Bag of Words](sections/bag_of_words.md)  
-[Topic Modeling with Latent Dirchlet Allocation (LDA)](sections/lda.md)  
 [Review](sections/review.md)  
 [Resources](sections/resources.md)  
+[Appendix: Visualization](sections/visualize.md)
 [Appendix: Visualizing the Decision Boundary](sections/decision_boundary.md)  
-[Appendix: Creating a Word Cloud](sections/word_cloud.md)  
+[Appendix: Topic Modeling with Latent Dirchlet Allocation (LDA)](sections/lda.md)
+[Appendix: Creating a Word Cloud](sections/word_cloud.md)
+
 
 -----
 
