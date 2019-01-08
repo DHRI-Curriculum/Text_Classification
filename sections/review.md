@@ -1,4 +1,4 @@
-[<<< Previous](unsuperised.md) |  [Next >>>](resources.md)
+[<<< Previous](unsupervised.md) |  [Next >>>](resources.md)
 
 # Review
 
