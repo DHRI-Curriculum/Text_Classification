@@ -31,16 +31,12 @@ This workshop will review key concepts for understanding how machine learning wo
 [Review](sections/review.md)  
 [Resources](sections/resources.md)
 
-
-[Appendix: Visualization](sections/visualize.md)
-
-[Appendix: Visualizing the Decision Boundary](sections/decision_boundary.md) 
-
-[Appendix: Feature Extraction Using Bag of Words](sections/bag_of_words.md)
-
-[Appendix: Topic Modeling with Latent Dirchlet Allocation (LDA)](sections/lda.md)
-
-[Appendix: Creating a Word Cloud](sections/word_cloud.md)
+Appendices:
+- [Appendix: Visualization](sections/visualize.md)
+- [Appendix: Visualizing the Decision Boundary](sections/decision_boundary.md) 
+- [Appendix: Feature Extraction Using Bag of Words](sections/bag_of_words.md)
+- [Appendix: Topic Modeling with Latent Dirchlet Allocation (LDA)](sections/lda.md)
+- [Appendix: Creating a Word Cloud](sections/word_cloud.md)
 
 
 -----
