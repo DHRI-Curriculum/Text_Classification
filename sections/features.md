@@ -250,4 +250,4 @@ Hint: `.to_csv()`
 df.to_csv("df_news_romance.csv", index=False)
 ```
 
-[<<< Previous](data.md) | [Next >>>](visualize.md)
+[<<< Previous](data.md) | [Next >>>](supervised.md)
