@@ -158,7 +158,8 @@ fig.savefig("images/categories_counts.png", bbox_inches = 'tight', pad_inches = 
 
 ![bar graph showing number of news articles vs number of romance articles. The heights are about equal but slightly more romance articles than news articles](/images/categories_counts.png)
 
+*Note: If an error occurs where `FileNotFoundError` seems to be the cause, it is likely because the directory where you are running the script does not have a folder called `images` inside. Create the folder and run the script again, or change the path in `fig.savefig` above to only "categories_counts.png."
 
-We have slightly more news data than romance data, which we should keep in mind as we go ahead with classification.
+From the graph it is easy to see that we have slightly more news data than romance data, which we should keep in mind as we go ahead with classification.
 
 [<<< Previous](classification.md) | [Next >>>](features.md)
