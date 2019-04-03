@@ -18,5 +18,4 @@ http://www.scottbot.net/HIAL/index.html@p=19113.html, 07/25/2012
 # Acknowledgments 
 Much gratitude to Kelsey Chatlosh,  Lisa Rhody, and Micheal Grossberg for substantive feedback that worked its way into content.
 
-[<<< Previous](review.md)  
-[<<< Return to beginning](../README.md)
+[<<< Previous](review.md) | [Back to beginning >>>](../README.md)
