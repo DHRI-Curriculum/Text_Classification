@@ -1,6 +1,6 @@
 [<<< Previous](unsupervised.md) | [Next >>>](lda.md)
 
-# Feature Extraction Using Bag of Words
+# Appendix: Feature Extraction Using Bag of Words
 
 We're almost ready to do some machine learning!  First, we need to turn our sentences into the type of *feature vectors* the algorithm we plan to work with expects. Jumping ahead a bit, the `Sklearn` implementation of the algorithm we will use for unsupervised learning requires that the text be in *bag of words* form, which is the unique words in the text and the count of occurances of that word. 
 
