@@ -1,4 +1,4 @@
-[Back to beginning >>>](../README.md)
+[<<< Previous](resources.md) | [Back to beginning >>>](../README.md)
 
 
 # Appendix: Topic Modeling with Latent Dirchlet Allocation (LDA)
@@ -212,4 +212,4 @@ Since topic modeling works better with longer texts, what topics do you get if y
 3. Both together?
 4. A contemporary text like The Hunger Games
 
-[<<< Previous](bag_of_words.md) | [Next >>>](review.md)
+[<<< Previous](resources.md) | [Back to beginning >>>](../README.md)
