@@ -15,6 +15,16 @@ http://www.scottbot.net/HIAL/index.html@p=19113.html, 07/25/2012
 
 "Introduction to Topic Modeling",Christine Doig, http://chdoig.github.io/pytexas2015-topic-modeling/#/, PyTexas, 2015 
 
+
+# Appendices
+
+- [Appendix: Visualization](sections/visualize.md)
+- [Appendix: Visualizing the Decision Boundary](sections/decision_boundary.md) 
+- [Appendix: Feature Extraction Using Bag of Words](sections/bag_of_words.md)
+- [Appendix: Topic Modeling with Latent Dirchlet Allocation (LDA)](sections/lda.md)
+- [Appendix: Creating a Word Cloud](sections/word_cloud.md)
+
+
 # Acknowledgments 
 Much gratitude to Kelsey Chatlosh,  Lisa Rhody, and Micheal Grossberg for substantive feedback that worked its way into content.
 
