@@ -10,21 +10,20 @@ What should we use as features for our data set?  What did we use as features fo
 
 Now that we are using sentences, how can we best represent each sentence as a series of values?
 
-One idea is to count how many particular *parts of speech* the sentence contains.
+One idea is to count how many particular *parts of speech* the sentence contains. In particular, let's see if we can find out how many nouns and adjectives are used in each sentence across our dataset:
 
 - Nouns: Most basically described as a person, place, or thing.  Counting nouns can help determine how many topics are being discussed in a sentence.
 - Adjectives: Descriptors of nouns (eg. "yellow", "angry", "charming").  Counting adjectives can help determine how often descriptive words are being added to nouns, which can demonstrate writing style.
 
+## Parts of Speech (POS)
 
-
-We will now compute all of the parts of speech on each sentence (row) in our dataframe.
-
+Let us first take a look at all of the parts of speech (POS) on each sentence in our dataframe. The sentences are located in the column `sentence`, and to get the parts of speech, we can use the function `pos_tag_sents` from the NLTK package:
 
 ```python
-# compute parts of speech on each sentence (row)
 pos_all = pos_tag_sents(df['sentence'])
 ```
 
+Let's look at the first five results:
 
 ```python
 print (pos_all[:5])
@@ -33,11 +32,11 @@ print (pos_all[:5])
     [[('The', 'DT'), ('Fulton', 'NNP'), ('County', 'NNP'), ('Grand', 'NNP'), ('Jury', 'NNP'), ('said', 'VBD'), ('Friday', 'NNP'), ('an', 'DT'), ('investigation', 'NN'), ('of', 'IN'), ("Atlanta's", 'NNP'), ('recent', 'JJ'), ('primary', 'JJ'), ('election', 'NN'), ('produced', 'VBD'), ('``', '``'), ('no', 'DT'), ('evidence', 'NN'), ("''", "''"), ('that', 'IN'), ('any', 'DT'), ('irregularities', 'NNS'), ('took', 'VBD'), ('place', 'NN'), ('.', '.')], [('The', 'DT'), ('jury', 'NN'), ('further', 'RB'), ('said', 'VBD'), ('in', 'IN'), ('term-end', 'JJ'), ('presentments', 'NNS'), ('that', 'IN'), ('the', 'DT'), ('City', 'NNP'), ('Executive', 'NNP'), ('Committee', 'NNP'), (',', ','), ('which', 'WDT'), ('had', 'VBD'), ('over-all', 'JJ'), ('charge', 'NN'), ('of', 'IN'), ('the', 'DT'), ('election', 'NN'), (',', ','), ('``', '``'), ('deserves', 'VBZ'), ('the', 'DT'), ('praise', 'NN'), ('and', 'CC'), ('thanks', 'NNS'), ('of', 'IN'), ('the', 'DT'), ('City', 'NNP'), ('of', 'IN'), ('Atlanta', 'NNP'), ("''", "''"), ('for', 'IN'), ('the', 'DT'), ('manner', 'NN'), ('in', 'IN'), ('which', 'WDT'), ('the', 'DT'), ('election', 'NN'), ('was', 'VBD'), ('conducted', 'VBN'), ('.', '.')], [('The', 'DT'), ('September-October', 'NNP'), ('term', 'NN'), ('jury', 'NN'), ('had', 'VBD'), ('been', 'VBN'), ('charged', 'VBN'), ('by', 'IN'), ('Fulton', 'NNP'), ('Superior', 'NNP'), ('Court', 'NNP'), ('Judge', 'NNP'), ('Durwood', 'NNP'), ('Pye', 'NNP'), ('to', 'TO'), ('investigate', 'VB'), ('reports', 'NNS'), ('of', 'IN'), ('possible', 'JJ'), ('``', '``'), ('irregularities', 'NNS'), ("''", "''"), ('in', 'IN'), ('the', 'DT'), ('hard-fought', 'JJ'), ('primary', 'NN'), ('which', 'WDT'), ('was', 'VBD'), ('won', 'VBN'), ('by', 'IN'), ('Mayor-nominate', 'NNP'), ('Ivan', 'NNP'), ('Allen', 'NNP'), ('Jr.', 'NNP'), ('.', '.')], [('``', '``'), ('Only', 'RB'), ('a', 'DT'), ('relative', 'JJ'), ('handful', 'NN'), ('of', 'IN'), ('such', 'JJ'), ('reports', 'NNS'), ('was', 'VBD'), ('received', 'VBN'), ("''", "''"), (',', ','), ('the', 'DT'), ('jury', 'NN'), ('said', 'VBD'), (',', ','), ('``', '``'), ('considering', 'VBG'), ('the', 'DT'), ('widespread', 'JJ'), ('interest', 'NN'), ('in', 'IN'), ('the', 'DT'), ('election', 'NN'), (',', ','), ('the', 'DT'), ('number', 'NN'), ('of', 'IN'), ('voters', 'NNS'), ('and', 'CC'), ('the', 'DT'), ('size', 'NN'), ('of', 'IN'), ('this', 'DT'), ('city', 'NN'), ("''", "''"), ('.', '.')], [('The', 'DT'), ('jury', 'NN'), ('said', 'VBD'), ('it', 'PRP'), ('did', 'VBD'), ('find', 'VB'), ('that', 'IN'), ('many', 'JJ'), ('of', 'IN'), ("Georgia's", 'NNP'), ('registration', 'NN'), ('and', 'CC'), ('election', 'NN'), ('laws', 'NNS'), ('``', '``'), ('are', 'VBP'), ('outmoded', 'VBN'), ('or', 'CC'), ('inadequate', 'JJ'), ('and', 'CC'), ('often', 'RB'), ('ambiguous', 'JJ'), ("''", "''"), ('.', '.')]]
     
 
-## What's with those part of speech labels?  They aren't helpful at all!
-The Penn Tagset, which NLTK uses for it's part of speech tagger, is not particularly intuitive.  Fortunately, they provide code that allows you to check what different tags stand for.
+What's with those part of speech labels? They are not very self-explanatory...!
+
+The Penn Tagset, which NLTK uses for its part-of-speech tagger, is not particularly intuitive.  Fortunately, they provide an easy function that allows you to see what the different tags stand for.
 
 ```python
-# troubleshooting: https://github.com/nltk/nltk/issues/919
 nltk.help.upenn_tagset("NN")
 nltk.help.upenn_tagset("JJ")
 ```
@@ -50,11 +49,10 @@ nltk.help.upenn_tagset("JJ")
         third ill-mannered pre-war regrettable oiled calamitous first separable
         ectoplasmic battery-powered participatory fourth still-to-be-named
         multilingual multi-disciplinary ...
-    
 
+## Calculating our Features
 
-## Write a function that calculates our features for us 
-### (In this case, numbers of nouns and adjectives that appear in the sentence)
+Let's create a function that calculates our features across the dataset for us. In this case, numbers of nouns and adjectives that appear in the sentence)
 
 Now we know the tags for the different parts of speech we want to count in each sentence.  Let's write a function that will count the parts of speech to us, when given a part of speech tagged sentence (such as what we have already in our DataFrame) and the part of speech we want to count (for example, "NN" to count the number of nouns in the sentence).
 
@@ -82,13 +80,11 @@ df['JJ'] = countPOS(pos_all, "JJ")
 
 ```
 
+Let's make sure it all looks OK: 
 
 ```python
 df.head()
 ```
-
-
-
 
 <div>
 <table border="1" class="dataframe">
@@ -142,14 +138,9 @@ df.head()
 </div>
 
 
-
-
-
 ```python
 df.tail()
 ```
-
-
 
 <div>
 
@@ -204,8 +195,7 @@ df.tail()
 </div>
 
 
-
-## How many features do we have?
+Next, let's take a look at how many features we have in the dataset:
 
 
 ```python
@@ -242,9 +232,9 @@ df.groupby('label').sum()
 </table>
 </div>
 
-## Practice 3:  Save the dataframe to your computer as a csv file (comma separated value)
+## Saving the Dataframe
 
-Hint: `.to_csv()`
+Pandas provides an easy function to save your DataFrames to your computer as a `.csv` file, a text file containing all the information separated by commas. The function is called `to_csv`:
 
 ```python
 df.to_csv("df_news_romance.csv", index=False)
