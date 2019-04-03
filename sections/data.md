@@ -156,7 +156,7 @@ fig.savefig("images/categories_counts.png", bbox_inches = 'tight', pad_inches = 
 ```
 
 
-![bar graph showing number of news articles vs number of romance articles. The heights are about equal](/images/categories_counts.png)
+![bar graph showing number of news articles vs number of romance articles. The heights are about equal but slightly more romance articles than news articles](/images/categories_counts.png)
 
 
 We have slightly more news data than romance data, which we should keep in mind as we go ahead with classification.
