@@ -140,4 +140,21 @@ df['label'].value_counts()
     romance    4431
     Name: label, dtype: int64
 
+
+
+## What if we want to visualize that information?
+We first create a `figure` and `axes` on which to draw our charts using `plt.subplots()`. Each chart is one axes, and a figure can contain multiple axes. This notation will be explained in detail when we discuss [visualization](visualize.md). Our data is encapsulated in `df['label'].value_counts()`, which is itself a *DataFrame*. We then tell the Pandas to visualize the *DataFrame* as a bar chart using `.plot.bar(ax=ax, rot=0)`. The `ax` keyword tells Pandas which chart in the figure to plot, and the `rot` keyword controls the rotation of the x axis labels.
+
+```python
+fig, ax = plt.subplots()
+_ = df['label'].value_counts().plot.bar(ax=ax, rot=0)
+fig.savefig("images/categories_counts.png", bbox_inches = 'tight', pad_inches = 0)
+```
+
+
+![bar graph showing number of news articles vs number of romance articles. The heights are about equal](/images/categories_counts.png)
+
+
+We have slightly more news data than romance data, which we should keep in mind as we go ahead with classification.
+
 [<<< Previous](classification.md) | [Next >>>](features.md)
