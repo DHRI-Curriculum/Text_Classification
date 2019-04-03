@@ -10,13 +10,16 @@ We are going to *classify* two different sets of sentences from very different s
 from nltk.corpus import brown
 ```
 
-For a list of categories in the Brown corpus, use the following code
+First, we want to take a look at each of the categories in the Brown corpus, so let's run the following code:
 
 ```python
 for cat in brown.categories():
     print (cat)
 ```
 
+It should generate a list of categories looking like this:
+
+```
     adventure
     belles_lettres
     editorial
@@ -32,17 +35,16 @@ for cat in brown.categories():
     reviews
     romance
     science_fiction
-    
+```
 
-## Get the sentences from each corpus
-
+Next, let's create two lists containing the sentences for two different categories — `news` and `romance`. In order to do so, run the following script:
 
 ```python
 news_sent = brown.sents(categories=["news"])
 romance_sent = brown.sents(categories=["romance"])
 ```
 
-## Take a look at the first 5 sentences in each corpus 
+To make sure that the lists were set up correctly, we can take a look at the first 5 sentences in each corpus by running the following code:
 
 
 ```python
@@ -52,12 +54,18 @@ print (romance_sent[:5])
 
 ```
 
+It should generate an output like this:
+
+```
     [['The', 'Fulton', 'County', 'Grand', 'Jury', 'said', 'Friday', 'an', 'investigation', 'of', "Atlanta's", 'recent', 'primary', 'election', 'produced', '``', 'no', 'evidence', "''", 'that', 'any', 'irregularities', 'took', 'place', '.'], ['The', 'jury', 'further', 'said', 'in', 'term-end', 'presentments', 'that', 'the', 'City', 'Executive', 'Committee', ',', 'which', 'had', 'over-all', 'charge', 'of', 'the', 'election', ',', '``', 'deserves', 'the', 'praise', 'and', 'thanks', 'of', 'the', 'City', 'of', 'Atlanta', "''", 'for', 'the', 'manner', 'in', 'which', 'the', 'election', 'was', 'conducted', '.'], ['The', 'September-October', 'term', 'jury', 'had', 'been', 'charged', 'by', 'Fulton', 'Superior', 'Court', 'Judge', 'Durwood', 'Pye', 'to', 'investigate', 'reports', 'of', 'possible', '``', 'irregularities', "''", 'in', 'the', 'hard-fought', 'primary', 'which', 'was', 'won', 'by', 'Mayor-nominate', 'Ivan', 'Allen', 'Jr.', '.'], ['``', 'Only', 'a', 'relative', 'handful', 'of', 'such', 'reports', 'was', 'received', "''", ',', 'the', 'jury', 'said', ',', '``', 'considering', 'the', 'widespread', 'interest', 'in', 'the', 'election', ',', 'the', 'number', 'of', 'voters', 'and', 'the', 'size', 'of', 'this', 'city', "''", '.'], ['The', 'jury', 'said', 'it', 'did', 'find', 'that', 'many', 'of', "Georgia's", 'registration', 'and', 'election', 'laws', '``', 'are', 'outmoded', 'or', 'inadequate', 'and', 'often', 'ambiguous', "''", '.']]
     
     [['They', 'neither', 'liked', 'nor', 'disliked', 'the', 'Old', 'Man', '.'], ['To', 'them', 'he', 'could', 'have', 'been', 'the', 'broken', 'bell', 'in', 'the', 'church', 'tower', 'which', 'rang', 'before', 'and', 'after', 'Mass', ',', 'and', 'at', 'noon', ',', 'and', 'at', 'six', 'each', 'evening', '--', 'its', 'tone', ',', 'repetitive', ',', 'monotonous', ',', 'never', 'breaking', 'the', 'boredom', 'of', 'the', 'streets', '.'], ['The', 'Old', 'Man', 'was', 'unimportant', '.'], ['Yet', 'if', 'he', 'were', 'not', 'there', ',', 'they', 'would', 'have', 'missed', 'him', ',', 'as', 'they', 'would', 'have', 'missed', 'the', 'sounds', 'of', 'bees', 'buzzing', 'against', 'the', 'screen', 'door', 'in', 'early', 'June', ';', ';'], ['or', 'the', 'smell', 'of', 'thick', 'tomato', 'paste', '--', 'the', 'ripe', 'smell', 'that', 'was', 'both', 'sweet', 'and', 'sour', '--', 'rising', 'up', 'from', 'aluminum', 'trays', 'wrapped', 'in', 'fly-dotted', 'cheesecloth', '.']]
-    
+```
 
-## What do you notice about the format of the data above?
+## Organization of Data
+
+What do you notice about the format of the data above?
+
 Each sentence is already *tokenized*—split into a series of word and punctuation strings, with whitespace removed. This saves us the time of having to do all of this work ourselves!
 
 To start to organize our data, let's put these sentences into a pandas *DataFrame*, an object which has a format very similar to an Excel spreadsheet.  We will first make two spread sheets (one for news, and one for romance), and then combine them into one.  We will also add the category each sentences came from, which will be our *labels* for each sentence and its associated feature representation (which we will build ourselves).
@@ -70,16 +78,13 @@ rdf = pd.DataFrame({'sentence':romance_sent,
                     'label':'romance'})
 ```
 
+Next, we combine the two DataFrames into one by running:
 
 ```python
-# combining two spreadsheets into 1
 df = pd.concat([ndf, rdf])
 ```
 
 Let's see what this DataFrame looks like!
-
-
-
 
 ```python
 df.head()
@@ -124,25 +129,24 @@ df.head()
 </table>
 </div>
 
-
-
-### So how many labels do we have?
-
+Next, let's see how many labels we have:
 
 ```python
 df['label'].value_counts()
 ```
 
+This should generate a list looking like:
 
-
-
+```
     news       4623
     romance    4431
     Name: label, dtype: int64
+```
 
+## Visualizing the Categories
 
+What if we wanted to visualize the information we have about our categories?
 
-## What if we want to visualize that information?
 We first create a `figure` and `axes` on which to draw our charts using `plt.subplots()`. Each chart is one axes, and a figure can contain multiple axes. This notation will be explained in detail when we discuss [visualization](visualize.md). Our data is encapsulated in `df['label'].value_counts()`, which is itself a *DataFrame*. We then tell the Pandas to visualize the *DataFrame* as a bar chart using `.plot.bar(ax=ax, rot=0)`. The `ax` keyword tells Pandas which chart in the figure to plot, and the `rot` keyword controls the rotation of the x axis labels.
 
 ```python
