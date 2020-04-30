@@ -4,9 +4,7 @@
 
 In this workshop, we are going to learn how to go through the process of doing *machine learning* on a set of data.   To do so, we will download a *corpus* of text data to work with, extract *features* from this data, and do *supervised* machine learning to our data, using a mathmatical algorithm to train a *classifier* which will then classify previously unseen data into a set of predefined categories.
 
-> "Machine learning is a research field that sits at the intersection of statistics, artificial intelligence, and computer science. It is also known as *predictive analytics* or *statistical learning*."  
->  
-> <cite>Andreas Mueller, "Introduction to Machine Learning with Python".</cite>
+> Machine learning is a research field that sits at the intersection of statistics, artificial intelligence, and computer science. It is also known as *predictive analytics* or *statistical learning*.<sup>1</sup>
 
 ## Key terms
 
@@ -16,9 +14,9 @@ In this workshop, we are going to learn how to go through the process of doing *
 
 **dataset**: a collection of related information (such as a corpus)
 
-- **variable**: an attribute of the dataset (such as the type of text being analyzed)
-- **observation**: an entry in the dataset (a single text)
-- **measurement**: a single data point (eg: one text's type)
+- *variable*: an attribute of the dataset (such as the type of text being analyzed)
+- *observation*: an entry in the dataset (a single text)
+- *measurement*: a single data point (eg: one text's type)
 
 **features**: properties that describe data attributes for machine learning—often the variables
 
@@ -31,5 +29,11 @@ In this workshop, we are going to learn how to go through the process of doing *
 **algorithm**: a process or set of rules to be followed in calculations (or other problem-solving operations), particularly by a computer
 
 **classification**: a machine learning task used to predict a class label, which is a choice from a predefined list of possibilities
+
+---
+
+<sup>1</sup> Andreas Mueller, _Introduction to Machine Learning with Python_.
+
+---
 
 [<<< Previous](../README.md) | [Next >>>](02-installation.md)

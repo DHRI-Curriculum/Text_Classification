@@ -2,29 +2,20 @@
 
 # Supervised Machine Learning
 
-Supervised machine learning takes places in two steps: the *training* phase, and the *testing* phase.  In the training phase, you use a portion of your data to *train* your algorithm (which, in our case, is a classification algorithm).  You provide both your feature vector and your labels to the algorithm, and the algorithm searches for patterns in your data that can help associate it with a particular label.
+Supervised machine learning takes places in two steps: the *training* phase, and the *testing* phase.
 
-In the testing phase, we use the classifier we trained in the previous step, and give it previously unseen feature vectors representing unseen data to the algorithm, and have the algorithm predict the label.  We can then compare the "true" label to the predicted label, and see if our classifier provides us with a good and generalizable way of accomplishing the task (in our case, the task of automatically distinguishing news sentences from romance sentences).
+![image depicting two steps of classification, step one (training) shows features and labels going into a classifier trainer which outputs a classifier, step two (testing) shows features going into a classifier which outputs a label](images/mlsteps.png)
 
-![image depicting two steps of classification, step one (training) shows features and labels going into a classifier trainer which outputs a classifier, step two (testing) shows features going into a classifier which outputs a label](../images/mlsteps.png)  
-<cite>Source: Andrew Rosenberg</cite>
+In the **training phase**, you use a portion of your data to *train* your algorithm (which, in our case, is a classification algorithm).  You provide both your feature vector and your labels to the algorithm, and the algorithm searches for patterns in your data that can help associate it with a particular label.
+
+In the **testing phase**, we use the classifier we trained in the previous step, and give it previously unseen feature vectors representing unseen data to the algorithm, and have the algorithm predict the label.  We can then compare the "true" label to the predicted label, and see if our classifier provides us with a good and generalizable way of accomplishing the task (in our case, the task of automatically distinguishing news sentences from romance sentences).
 
 It's important to remember that we cannot use the same data we used to build the classifier to test the data; if we did, our classifier would be 100% correct all of the time!  This will not tell us how our trained classifer will perform on new, unseen data.  We therefore need to split our data into a *train set* and a *test set*.
 
 - We will use the train set data to train our classifier
 - We will use the test set data to test our classifier
 
-First, we need to load in the Python libraries that we will be using for our analysis.
-
-```python
-import nltk
-from nltk.corpus import brown
-from nltk import pos_tag_sents
-import pandas as pd
-import matplotlib.pyplot as plt
-%matplotlib inline
-import sklearn
-```
+Make sure you have loaded the Python libraries needed for the analysis, from the [Installation and Setup](02-installation.md) (`nltk`, `pandas`, `sklearn`, etc.).
 
 ## Read data in from a spreadsheet
 
@@ -43,17 +34,23 @@ fv = df[["NN", "JJ"]]
 fv.head()
 ```
 
-|   | NN  | JJ |
-|---|---|---|---|---|
-| **0** | 11  | 2 |
-| **1** | 13  | 2 |
-| **2** | 16  | 2 |
-| **3** | 9  | 3 |
-| **4** | 5  | 3 |
+We should see a table with the first couple of rows as a result:
+
+|       | NN  | JJ
+| ---   | --- | ---
+| **0** | 11  | 2
+| **1** | 13  | 2
+| **2** | 16  | 2
+| **3** | 9   | 3
+| **4** | 5   | 3
+
+If we want to count the occurrences of each of the labels, we can run:
 
 ```python
 df['label'].value_counts()
 ```
+
+This should yield the following output:
 
 ```
 news       4623
@@ -61,13 +58,13 @@ romance    4431
 Name: label, dtype: int64
 ```
 
-We have more news sentences than romance sentences; this is not a problem, but it's something to take note of during evaluation.
+We have more sentences labeled `news` than `romance`; this is not a problem, but it's something to take note of during evaluation.
 
 ## Partitioning data into train and test sets
 
 When you are partitioning your data into train and test sets, a good place to start is to use 75% of your data for training, and 25% of your data for testing.  We want as much training data as possible, while also having enough testing data to ensure that our trained classifier is generalizable across a number of examples.  This will also lead to more accurate evalutation of our trained classifier.
 
-Fortunately, sklearn has a function that will do exactly this!
+Fortunately, `sklearn` has a function that will do exactly this!
 
 ```python
 from sklearn.model_selection import train_test_split
@@ -86,24 +83,31 @@ print(X_train.shape)
 print(X_test.shape)
 ```
 
+The output from the above code should be:
+
 ```
 (6790, 3)
 (2264, 3)
 ```
 
 ## What classifier do I use?
+
 Chosing a classifier can be a challenging task.  However, this flowchart can give you an idea of where to start!
 
-![scikit-learn's algorithm cheat sheet, which depicts a mind-map scheme, which can help you choose an algorithm for classification](../images/algorithms_cheatsheet.png)  
-<cite>Source: Andreas Mueller</cite>
+![scikit-learn's algorithm cheat sheet, a flowchart that can aid in choosing an algorithm for classification](images/algorithms_cheatsheet.png)  
 
-According to this, we are going to use `LinearSVC`, which is a linear model for classification that separates classes using a line, a plane, or a hyperplane. SVC stands for "Support Vector Classifier", which is a type of support vector machine algorithm.
+Following this flowchart, we are going to use `LinearSVC`, which is a linear model for classification that separates classes using a line, a plane, or a hyperplane. SVC stands for "Support Vector Classifier", which is a type of support vector machine algorithm.
 
 ## An animated example of classification
 
-The following animated GIF shows an example of linear classification.
+The following animated image shows an example of linear classification.
 
-![animated gif using red, blue, and grey dots to show how decision boundaries change based on distance of grey dot to clusters of red and blue dots](../images/croppedml.gif)  
-<cite>Source: Andrew Rosenberg</cite>
+![An animated image using red, blue, and grey dots to show how decision boundaries change based on distance of grey dot to clusters of red and blue dots](images/croppedml.gif)
+
+---
+
+###### All the images except, the scikit-learn algorithm cheat-sheet, on this page are borrowed from Andrew Rosenberg. The scikit-learn algorithm cheat-sheet is borrowed from Andreas Mueller.
+
+---
 
 [<<< Previous](05-visualize.md) | [Next >>>](07-supervised_classification.md)

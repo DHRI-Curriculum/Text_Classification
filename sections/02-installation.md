@@ -2,21 +2,7 @@
 
 # Installation and Setup
 
-## Python 3
-
-- the Natural Language Toolkit
-  - We will be using both corpora and tools from this package
-- pandas
-  - We will use this for data processing
-  - Comes with Anaconda
-- matplotlib
-  - We will use this for visualizing our data
-  - Comes with Anaconda
-- scikit-learn
-  - We will use this for machine learning
-  - Comes with Anaconda
-
-## Importing Packages
+## Importing Packages to Python 3
 
 Let's get started by importing some packages we will need for this workshop.
 
@@ -30,12 +16,13 @@ import matplotlib.pyplot as plt
 import sklearn
 ```
 
-- The Brown Corpus: A text corpus of American English, split into fifteen different categories
-- Part of speech taggers (POS): prebuilt functions that are designed to determine the part of speech of every word in the sentence you give them
-- `pandas as pd`: importing the Pandas toolkit and renaming it `pd`, to make the command briefer for us to type each time we use it
-- `matplotlib.pyplot as plt`: importing plotting tools from matplotlib and renaming them plt
-- We use the code `%matplotlib inline` to ensure our images display clearly in the Jupyter notebook.
-- `sklearn`: the scikit-learn machine learning toolkit
+- `nltk`, the Natural Language ToolKit, which will be used for corpora and tools:
+  - _`brown`_: The Brown Corpus, a text corpus of American English, split into fifteen different categories.
+  - _`pos_tag_sents`_ Part of speech taggers (POS): prebuilt functions that are designed to determine the part of speech of every word in the sentence you give them.
+- `pandas as pd`: importing the Pandas toolkit, which we will be using for data processing. We are renaming it `pd` to make the command briefer for us to type each time we use it.
+- `matplotlib.pyplot as plt`: We will use MatPlotLib for visualizing our data. We are importing the plotting tools here, and renaming them `plt`.
+- `sklearn`: This is the "motor" of the machine learning toolkit that we will be using—the scikit-learn machine learning toolkit.
+- Finally, we use the code `%matplotlib inline` to ensure our images display clearly in the Jupyter notebook.
 
 ---
 

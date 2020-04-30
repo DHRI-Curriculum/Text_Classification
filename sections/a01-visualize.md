@@ -6,7 +6,7 @@ What do you notice about the data? Do you think our features will be good at pre
 
 We will be using the *matplotlib* and *pandas* libraries to visualize our data, and the latter is built on the former. As mentioned above, a *matplotlib* visualization is a `figure` onto which is attached one or more `axes`. Each `axes` has a horizontal (x) `axis` and vertical (y) `axis`, and the data is encoded using color and glyphs such as `markers` (for example circles) or `lines` or polygons (called `patches`). The figure below annotates these parts of a visualization and was created by Nicolas P. Rougier using `matplotlib`. The source code can be found in the [matplotlib documentation](https://matplotlib.org/gallery/showcase/anatomy.html#sphx-glr-gallery-showcase-anatomy-py).
 
-![Diagram of the components of the matplotlib generated visualization.](../images/mpl_anatomy.png)
+![Diagram of the components of the matplotlib generated visualization.](images/mpl_anatomy.png)
 
 ## How do we visualize the table of parts of speech?
 
@@ -20,7 +20,7 @@ _ = df.groupby('label').sum().T.plot.bar(ax=ax2, color=['tab:blue','tab:orange']
 fig.savefig("images/part_of_speech.png", bbox_inches = 'tight', pad_inches = 0)
 ```
 
-![Two bar charts showing the different counts of parts of speech for news and romance data. News sentences have more nouns and more adjectives, and a much larger percentage of nouns then adjectives. The first bar chart groups the data by sentence type, the second chart by type of part of speech.](../images/part_of_speech.png)
+![Two bar charts showing the different counts of parts of speech for news and romance data. News sentences have more nouns and more adjectives, and a much larger percentage of nouns then adjectives. The first bar chart groups the data by sentence type, the second chart by type of part of speech.](images/part_of_speech.png)
 
 ## Are there patterns in the individual observations?
 
@@ -41,7 +41,7 @@ _ = ax.set_aspect("equal")
 fig.savefig("images/news_scatter.png", bbox_inches = 'tight', pad_inches = 0)
 ```
 
-![Scatter plot of number of nouns in a sentence versus number of adjectives in a sentence, colored by sentence type. Romance and news have abouth the same number of adjectives, but romance has fewer nouns.](../images/news_scatter.png)
+![Scatter plot of number of nouns in a sentence versus number of adjectives in a sentence, colored by sentence type. Romance and news have abouth the same number of adjectives, but romance has fewer nouns.](images/news_scatter.png)
 
 ```python
 # Let's flip the order
@@ -55,7 +55,7 @@ _ = ax.set_aspect("equal")
 fig.savefig("images/romance_scatter.png", bbox_inches = 'tight', pad_inches = 0)
 ```
 
-![Same scatter plot as above, but with the order of plotting the data flipped. This graph shows that news sentences highly overlap romance sentences in noun and adjective counts.](../images/romance_scatter.png)
+![Same scatter plot as above, but with the order of plotting the data flipped. This graph shows that news sentences highly overlap romance sentences in noun and adjective counts.](images/romance_scatter.png)
 
 ## How do we visualize dense, highly overlapping data?
 
@@ -79,7 +79,7 @@ _ = ax.set_aspect("equal")
 fig.savefig("images/jitter.png", bbox_inches = 'tight', pad_inches = 0)
 ```
 
-![Same scatter plot as above, but with jitter added to points so that the pattern is now smeared to show that the data tends to overlap.](../images/jitter.png)
+![Same scatter plot as above, but with jitter added to points so that the pattern is now smeared to show that the data tends to overlap.](images/jitter.png)
 
 ## Visualize Side By Side
 
@@ -101,6 +101,6 @@ _ = ax2.set_aspect('equal')
 fig.savefig("images/side_by_side.png", bbox_inches = 'tight', pad_inches = 0)
 ```
 
-![Composite image of bar chart comparing the total count of nouns and adjectives in each group (romance and news) next to the jittered scatterplot of individual observations. In the bar chart, the highest value is nouns in news, and this is reflected in the scatter where there are many news dots to the right of the romance dots.](../images/side_by_side.png)
+![Composite image of bar chart comparing the total count of nouns and adjectives in each group (romance and news) next to the jittered scatterplot of individual observations. In the bar chart, the highest value is nouns in news, and this is reflected in the scatter where there are many news dots to the right of the romance dots.](images/side_by_side.png)
 
 [<<< Previous](10-resources.md) | [Back to beginning >>>](../README.md)

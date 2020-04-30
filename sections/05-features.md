@@ -4,16 +4,20 @@
 
 ## Defining Features
 
-What should we use as features for our data set?  What did we use as features for our fruit example before?
+What should we use as features for our data set?  What did we use as features for our fruit example [before](03-classification.md)?
 
-![table of fruit with features height, width, color, mass, round - one row in table set of features with unknown label ](../images/fruit3.png)
+| Object | Height | Width | Color  | Mass | Round?
+| :--:   | :--:   | :--:  | :--:   | :--: | :--:
+| Apple  | 6cm    | 7cm   | Red    | 330g | `True`
+| Orange | 6cm    | 7cm   | Orange | 330g | `True`
+| Lemon  | 5cm    | 4cm   | Yellow | 150g | `False`
 
 Now that we are using sentences, how can we best represent each sentence as a series of values?
 
 One idea is to count how many particular *parts of speech* the sentence contains. In particular, let's see if we can find out how many nouns and adjectives are used in each sentence across our dataset:
 
-- Nouns: Most basically described as a person, place, or thing.  Counting nouns can help determine how many topics are being discussed in a sentence.
-- Adjectives: Descriptors of nouns (eg. "yellow", "angry", "charming").  Counting adjectives can help determine how often descriptive words are being added to nouns, which can demonstrate writing style.
+- **Nouns**: Most basically described as a person, place, or thing.  Counting nouns can help determine how many topics are being discussed in a sentence.
+- **Adjectives**: Descriptors of nouns (e.g. "yellow", "angry", "charming").  Counting adjectives can help determine how often descriptive words are being added to nouns, which can demonstrate writing style.
 
 ## Parts of Speech (POS)
 
@@ -80,164 +84,62 @@ df['NN'] = countPOS(pos_all, 'NN')
 df['JJ'] = countPOS(pos_all, "JJ")
 ```
 
-Let's make sure it all looks OK:
+Let's make sure it all looks OK by looking at the leading five rows by running:
 
 ```python
 df.head()
 ```
 
-<div>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>label</th>
-      <th>sentence</th>
-      <th>NN</th>
-      <th>JJ</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>news</td>
-      <td>[The, Fulton, County, Grand, Jury, said, Frida...</td>
-      <td>11</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>news</td>
-      <td>[The, jury, further, said, in, term-end, prese...</td>
-      <td>13</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>news</td>
-      <td>[The, September-October, term, jury, had, been...</td>
-      <td>16</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>news</td>
-      <td>[``, Only, a, relative, handful, of, such, rep...</td>
-      <td>9</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>news</td>
-      <td>[The, jury, said, it, did, find, that, many, o...</td>
-      <td>5</td>
-      <td>3</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+This should present us with the following table:
 
+|   | label  | sentence | NN | JJ
+|---|---|---|---|---|---|---|
+| **0** | news  |  [The, Fulton, County, Grand, Jury, said, Frida... | 11 | 2
+| **1** | news  |  [The, jury, further, said, in, term-end, prese... | 13 | 2
+| **2** | news  |  [The, September-October, term, jury, had, been... | 16 | 2
+| **3** | news  |  [``, Only, a, relative, handful, of, such, rep... | 9  | 3
+| **4** | news  |  [The, jury, said, it, did, find, that, many, o... | 5  | 3
+
+We can also look at the trailing five rows by running:
 
 ```python
 df.tail()
 ```
 
-<div>
+This should yield a result that looks like this:
 
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>label</th>
-      <th>sentence</th>
-      <th>NN</th>
-      <th>JJ</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>4426</th>
-      <td>romance</td>
-      <td>[Nobody, else, showed, pleasure, .]</td>
-      <td>2</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>4427</th>
-      <td>romance</td>
-      <td>[Spike-haired, ,, burly, ,, red-faced, ,, deck...</td>
-      <td>9</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>4428</th>
-      <td>romance</td>
-      <td>[``, Hello, ,, boss, '', ,, he, said, ,, and, ...</td>
-      <td>2</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>4429</th>
-      <td>romance</td>
-      <td>[``, I, suppose, I, can, never, expect, to, ca...</td>
-      <td>3</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>4430</th>
-      <td>romance</td>
-      <td>[``, I'm, afraid, not, '', .]</td>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+|   | label  | sentence | NN | JJ
+|---|---|---|---|---|---|---|
+| **4426** | romance  |  [Nobody, else, showed, pleasure, ... | 2 | 0
+| **4427** | romance  |  [Spike-haired, ,, burly, ,, red-faced, ,, deck... | 9 | 3
+| **4428** | romance  |  [``, Hello, ,, boss, '', ,, he, said, ,, and, ... | 2 | 0
+| **4429** | romance  |  [``, I, suppose, I, can, never, expect, to, ca... | 3  | 0
+| **4430** | romance  |  [``, I'm, afraid, not, '', ... | 1 | 0
 
+It all looks good!
 
 Next, let's take a look at how many features we have in the dataset:
-
 
 ```python
 df.groupby('label').sum()
 ```
 
+Running this should provide us with this table:
 
-<div>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>NN</th>
-      <th>JJ</th>
-    </tr>
-    <tr>
-      <th>label</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>news</th>
-      <td>31593</td>
-      <td>6678</td>
-    </tr>
-    <tr>
-      <th>romance</th>
-      <td>13821</td>
-      <td>4022</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+|             | NN    | JJ
+| :---:       | :---: | :---:
+| **label**   |       |
+| **news**    | 31593 | 6678
+| **romance** | 13821 | 4022
 
 ## Saving the Dataframe
 
-Pandas provides an easy function to save your DataFrames to your computer as a `.csv` file, a text file containing all the information separated by commas. The function is called `to_csv`:
+Pandas provides an easy function to save your DataFrames to your computer as a `.csv` file, a text file containing all the information separated by commas. The function is called `to_csv`.
 
 ```python
 df.to_csv("df_news_romance.csv", index=False)
 ```
+
+Here we export to a file named `df_news_romance.csv` and setting `index` to `False` in order to not export the row names. The result of running this function should be a file in the same directory as your Python script.
 
 [<<< Previous](04-data.md) | [Next >>>](06-supervised.md)

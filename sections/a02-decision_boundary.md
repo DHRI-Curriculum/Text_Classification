@@ -92,7 +92,7 @@ plot_boundary(ax2, classifier, fv, X_test, y_test, "Linear SVC: Testing Data")
 fig.savefig("images/both.png", bbox_inches = 'tight', pad_inches = 0)
 ```
 
-![The dark gray line in the figure is the decision boundary that the *LinearSVC* classifier found for this set of training data. All the data (dots) to the left of the gray line in the area with the orange background are classified as romance, while all the data to the right in the blue area are classified as news. The leftward skew of the classification space is due to the data being very dense and highly overlapping. Visualization of the decision boundary of the scatter plot found via the fit method. Here we have two plots: the decision boundary generated from the training data, and the testing data plotted against the decision boundary](../images/both.png)
+![The dark gray line in the figure is the decision boundary that the *LinearSVC* classifier found for this set of training data. All the data (dots) to the left of the gray line in the area with the orange background are classified as romance, while all the data to the right in the blue area are classified as news. The leftward skew of the classification space is due to the data being very dense and highly overlapping. Visualization of the decision boundary of the scatter plot found via the fit method. Here we have two plots: the decision boundary generated from the training data, and the testing data plotted against the decision boundary](images/both.png)
 
 ## Generating a wordcloud from frequencies
 
@@ -199,6 +199,6 @@ _ = ax.axis("off")
 fig.savefig("images/countvect_wordcloud.png", bbox_inches = 'tight', pad_inches = 0)
 ```
 
-![Word cloud visualization, where the size of the word is relative to its frequency in a sentence, of "Mrs. Robert O. Spurdle is chairman of the committee , which includes Mrs. James A. Moody , Mrs. Frank C. Wilkinson , Mrs. Ethel Coles , Mrs. Harold G. Lacy , Mrs. Albert W. Terry , Mrs. Henry M. Chance , 2d , Mrs. Robert O. Spurdle , Jr. , Mrs. Harcourt N. Trimble , Jr. , Mrs. John A. Moller , Mrs. Robert Zeising , Mrs. William G. Kilhour , Mrs. Hughes Cauffman , Mrs. John L. Baringer and Mrs. Clyde Newman ."](../images/countvect_wordcloud.png?)
+![Word cloud visualization, where the size of the word is relative to its frequency in a sentence, of "Mrs. Robert O. Spurdle is chairman of the committee , which includes Mrs. James A. Moody , Mrs. Frank C. Wilkinson , Mrs. Ethel Coles , Mrs. Harold G. Lacy , Mrs. Albert W. Terry , Mrs. Henry M. Chance , 2d , Mrs. Robert O. Spurdle , Jr. , Mrs. Harcourt N. Trimble , Jr. , Mrs. John A. Moller , Mrs. Robert Zeising , Mrs. William G. Kilhour , Mrs. Hughes Cauffman , Mrs. John L. Baringer and Mrs. Clyde Newman ."](images/countvect_wordcloud.png?)
 
 [<<< Previous](10-resources.md) | [Back to beginning >>>](../README.md)
