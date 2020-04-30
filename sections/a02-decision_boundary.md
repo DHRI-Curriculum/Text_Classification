@@ -37,10 +37,10 @@ np.random.seed(42)
 tabcm = mcolors.ListedColormap([mcm.tab20c(0), mcm.tab20c(1), mcm.tab20c(2), mcm.tab20c(3),
                                 mcm.tab20c(7), mcm.tab20c(6), mcm.tab20c(5), mcm.tab20c(4)])
 # orange - positive, blue - negative
-norm = mcolors.BoundaryNorm([-7, -5, -3, -1, 0,  1, 3, 5, 7], ncolors=tabcm.N)
+norm = mcolors.BoundaryNorm([-7, -5, -3, -1, 0, 1, 3, 5, 7], ncolors=tabcm.N)
 
 def jitter(arr):
-    scale = .01*(arr.min() - arr.max())
+    scale = .01 * (arr.min() - arr.max())
     return arr + np.random.randn(arr.shape[0]) * scale
 
 def plot_boundary(ax, clf, Xt, Xs, ys, title):
@@ -64,9 +64,9 @@ def plot_boundary(ax, clf, Xt, Xs, ys, title):
                linestyles=['--', '-', '--'], alpha=.5, zorder=20)
 
     # Plot and label the data
-    ax.scatter(jitter(Xs['NN'][ys=="news"]), jitter(Xs['JJ'][ys=="news"]), 
+    ax.scatter(jitter(Xs['NN'][ys=="news"]), jitter(Xs['JJ'][ys=="news"]),
                 color="tab:blue", label="news", edgecolor='k', alpha=.5)
-    ax.scatter(jitter(Xs['NN'][ys=="romance"]), jitter(Xs['JJ'][ys=="romance"]), 
+    ax.scatter(jitter(Xs['NN'][ys=="romance"]), jitter(Xs['JJ'][ys=="romance"]),
                color="tab:orange", label="romance", edgecolor='k', alpha=.5)
 
     ax.set_title(title)
@@ -92,7 +92,9 @@ plot_boundary(ax2, classifier, fv, X_test, y_test, "Linear SVC: Testing Data")
 fig.savefig("images/both.png", bbox_inches = 'tight', pad_inches = 0)
 ```
 
-![The dark gray line in the figure is the decision boundary that the *LinearSVC* classifier found for this set of training data. All the data (dots) to the left of the gray line in the area with the orange background are classified as romance, while all the data to the right in the blue area are classified as news. The leftward skew of the classification space is due to the data being very dense and highly overlapping. Visualization of the decision boundary of the scatter plot found via the fit method. Here we have two plots: the decision boundary generated from the training data, and the testing data plotted against the decision boundary](images/both.png)
+The dark gray line in the figure is the decision boundary that the LinearSVC classifier found for this set of training data. All the data (dots) to the left of the gray line in the area with the orange background are classified as romance, while all the data to the right in the blue area are classified as news. The leftward skew of the classification space is due to the data being very dense and highly overlapping. Visualization of the decision boundary of the scatter plot found via the fit method. Here we have two plots: the decision boundary generated from the training data, and the testing data plotted against the decision boundary:
+
+![The dark gray line in the figure is the decision boundary that the LinearSVC classifier found for this set of training data. All the data (dots) to the left of the gray line in the area with the orange background are classified as romance, while all the data to the right in the blue area are classified as news. The leftward skew of the classification space is due to the data being very dense and highly overlapping. Visualization of the decision boundary of the scatter plot found via the fit method. Here we have two plots: the decision boundary generated from the training data, and the testing data plotted against the decision boundary](images/both.png)
 
 ## Generating a wordcloud from frequencies
 
@@ -171,7 +173,7 @@ frequencies
 }
 ```
 
-We can also find out what row these frequencies come from so that we can compare to the orginal document. `(tf_mat>10).any(axis=1)` is `True` whenever any column in a row has a value greater than 10, and `nonzero` returns the position of `True` values. We then do a little unpacking and grab the element at position `1` because we took the document at position `1` from the docs matrix. We then select the row in our dataframe at the same position to get the original sentence.
+We can also find out what row these frequencies come from so that we can compare to the orginal document. `(tf_mat>10).any(axis=1)` is `True` whenever any column in a row has a value greater than 10, and `nonzero` returns the position of `True` values. We then do a little unpacking and grab the element at position `1` because we took the document at position `1` from the docs matrix. We then select the row in our DataFrame at the same position to get the original sentence.
 
 ```python
 doc_id = (tf_mat>10).any(axis=1).nonzero()[0][1]

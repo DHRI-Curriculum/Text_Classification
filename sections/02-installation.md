@@ -16,12 +16,14 @@ import matplotlib.pyplot as plt
 import sklearn
 ```
 
+Line-by-line, here is what we must import and why, in order to begin our machine learning process:
+
 - `nltk`, the Natural Language ToolKit, which will be used for corpora and tools:
   - _`brown`_: The Brown Corpus, a text corpus of American English, split into fifteen different categories.
   - _`pos_tag_sents`_ Part of speech taggers (POS): prebuilt functions that are designed to determine the part of speech of every word in the sentence you give them.
 - `pandas as pd`: importing the Pandas toolkit, which we will be using for data processing. We are renaming it `pd` to make the command briefer for us to type each time we use it.
 - `matplotlib.pyplot as plt`: We will use MatPlotLib for visualizing our data. We are importing the plotting tools here, and renaming them `plt`.
-- `sklearn`: This is the "motor" of the machine learning toolkit that we will be using—the scikit-learn machine learning toolkit.
+- `sklearn`: This is the machine learning "engine" that we will be using, the "scikit-learn machine learning toolkit," or "scikit-learn toolkit" for short.
 - Finally, we use the code `%matplotlib inline` to ensure our images display clearly in the Jupyter notebook.
 
 ---

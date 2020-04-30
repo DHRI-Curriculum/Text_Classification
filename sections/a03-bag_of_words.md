@@ -2,11 +2,11 @@
 
 # Appendix: Feature Extraction Using Bag of Words
 
-We're almost ready to do some machine learning!  First, we need to turn our sentences into the type of *feature vectors* the algorithm we plan to work with expects. Jumping ahead a bit, the `Sklearn` implementation of the algorithm we will use for unsupervised learning requires that the text be in *bag of words* form, which is the unique words in the text and the count of occurances of that word.
+We're almost ready to do some machine learning! First, we need to turn our sentences into the type of _feature vectors_ the algorithm we plan to work with expects. Jumping ahead a bit, the `sklearn` implementation of the algorithm we will use for unsupervised learning requires that the text be in _bag of words_ form, which is the unique words in the text and the count of occurances of that word.
 
 ## Read data in from a spreadsheet
 
-Let's take the data we just saved out and load it back into a dataframe so that we can do some analysis with it!
+Let's take the data we just saved out and load it back into a DataFrame so that we can do some analysis with it!
 
 ```python
 import pandas as pd
@@ -22,7 +22,7 @@ df.head()
 | **3** | news  |  ['``', 'Only', 'a', 'relative', 'handful', 'of'... | 9 | 3
 | **4** | news  |  ['The', 'jury', 'said', 'it', 'did', 'find'... | 5 | 3
 
-Then we print the first 5 rows of the *sentence* column in the spreadsheet:
+Then we print the first 5 rows of the _sentence_ column in the spreadsheet:
 
 ```python
 df['sentence'].head()
@@ -39,7 +39,7 @@ Name: sentence, dtype: object
 
 ## Bag of Words
 
-We preprocess our data using sklearn's text feature extraction tools. In particular, we use the `CountVectorizer` which computes the frequency of each token in the document. We can strip out *stop words* (words that are so common they don't add to the data analysis, such as "the" and "a") using the `stop_words` keyword argument. A keyword argument is an optional function parameter.
+We preprocess our data using `sklearn`'s text feature extraction tools. In particular, we use the `CountVectorizer` which computes the frequency of each token in the document. We can strip out _stop words_ (words that are so common they don't add to the data analysis, such as "the" and "a") using the `stop_words` keyword argument. A keyword argument is an optional function parameter.
 
 ```python
 from sklearn.feature_extraction.text import CountVectorizer

@@ -4,13 +4,15 @@
 
 What do you notice about the data? Do you think our features will be good at predicting news and romance sentences? Which features do you think will be the most useful?
 
-We will be using the *matplotlib* and *pandas* libraries to visualize our data, and the latter is built on the former. As mentioned above, a *matplotlib* visualization is a `figure` onto which is attached one or more `axes`. Each `axes` has a horizontal (x) `axis` and vertical (y) `axis`, and the data is encoded using color and glyphs such as `markers` (for example circles) or `lines` or polygons (called `patches`). The figure below annotates these parts of a visualization and was created by Nicolas P. Rougier using `matplotlib`. The source code can be found in the [matplotlib documentation](https://matplotlib.org/gallery/showcase/anatomy.html#sphx-glr-gallery-showcase-anatomy-py).
+We will be using the `matplotlib` library (and `pandas`'s built-in help-methods) to visualize our data.
+
+As mentioned above, a `matplotlib` visualization is a `figure` onto which is attached one or more `axes`. Each `axes` has a horizontal (x) `axis` and vertical (y) `axis`, and the data is encoded using color and glyphs such as `markers` (for example circles) or `lines` or polygons (called `patches`). The terminology can be complex so the visual representation below, created by Nicolas P. Rougier, annotates these parts of a visualization.
 
 ![Diagram of the components of the matplotlib generated visualization.](images/mpl_anatomy.png)
 
 ## How do we visualize the table of parts of speech?
 
-We can directly plot any dataframe in pandas using the `.plot` method, and can do `.plot.<type>` to denote the type of chart we want to plot. This situation calls for a bar chart because there are two classes of discrete sums of counts. To explore a different grouping, the table can be rotated using `.T` (transpose).
+We can directly plot any DataFrame in `pandas` using the `.plot` method, and can do `.plot.<type>` to denote the type of chart we want to plot. This situation calls for a bar chart because there are two classes of discrete sums of counts. To explore a different grouping, the table can be rotated using `.T` (transpose).
 
 ```python
 fig, (ax1,ax2) = plt.subplots(ncols=2, figsize=(15,5))
@@ -27,7 +29,7 @@ fig.savefig("images/part_of_speech.png", bbox_inches = 'tight', pad_inches = 0)
 We can make a scatter plot of our data colored by label to see if the patterns observed in the aggregate are visible in the individual observations.
 
 ```python
-# separate our data into the two classes
+# Separate our data into the two classes
 news = df[df['label']=='news']
 romance = df[df['label']=='romance']
 
@@ -59,13 +61,13 @@ fig.savefig("images/romance_scatter.png", bbox_inches = 'tight', pad_inches = 0)
 
 ## How do we visualize dense, highly overlapping data?
 
-As seen above, when the data is very dense the points can sometimes overlap. One way to visualize this overlapping data is to shift each point by a tiny amount so that the data is no longer at exactly the same coordinate. This technique is called *jittering*. In the `jitter` function below, we compute a scale factor by which to multiply random numbers between 0 and 1 so that the jitter is large enough to effect the visualization, but small enough that it does not strongly distort the data. 
+As seen above, when the data is very dense the points can sometimes overlap. One way to visualize this overlapping data is to shift each point by a tiny amount so that the data is no longer at exactly the same coordinate. This technique is called _jittering_. In the `jitter` function below, we compute a scale factor by which to multiply random numbers between 0 and 1 so that the jitter is large enough to effect the visualization, but small enough that it does not strongly distort the data.
 
 ```python
 np.random.seed(42)
 
 def jitter(arr):
-    scale = .01*(arr.min() - arr.max())
+    scale = .01 * (arr.min() - arr.max())
     return arr + np.random.randn(arr.shape[0]) * scale
 
 fig, ax = plt.subplots(figsize=(15,10))
