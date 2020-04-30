@@ -87,13 +87,13 @@ Let's see what this DataFrame looks like!
 df.head()
 ```
 
-|   | label  | sentence |
-|---|---|---|---|---|
-| **0** | news  |  [The, Fulton, County, Grand, Jury, said, Frida... |
-| **1** | news  |  [The, jury, further, said, in, term-end, prese... |
-| **2** | news  |  [The, September-October, term, jury, had, been... |
-| **3** | news  |  [``, Only, a, relative, handful, of, such, rep... |
-| **4** | news  |  [The, jury, said, it, did, find, that, many, o... |
+|       | label  | sentence
+| ---   | ---    | ---
+| **0** | news   | [The, Fulton, County, Grand, Jury, said, Frida...
+| **1** | news   | [The, jury, further, said, in, term-end, prese...
+| **2** | news   | [The, September-October, term, jury, had, been...
+| **3** | news   | [``, Only, a, relative, handful, of, such, rep...
+| **4** | news   | [The, jury, said, it, did, find, that, many, o...
 
 Next, let's see how many labels we have:
 
