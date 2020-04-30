@@ -2,7 +2,7 @@
 
 # What Is Classification?
 
-Let's show an example of classification using fruit!
+Let's show an example of classification using fruit! These examples are inspired by Andrew Rosenberg's 2014 class in Methods in Computational Linguistics.
 
 ## Example: Fruit
 
@@ -32,11 +32,5 @@ What if we had a new, unknown fruit?
 Our fruit test is an example of a _classification_ task. Classification allows you to predict a _categorical_ value. This is a type of **supervised machine learning**, meaning we know the labels ahead of time and can give them to the machine learning algorithm so that it can be trained to knows what the categories of our data are. This way, when it comes time to give the algorithm previously unseen data, it knows which categories it's looking for.
 
 We acknowledge that often times we are not trying to divide apples and oranges, but categories of people or personal attributes. While we are going to focus on the mechanics of machine learning, we strongly recommend that this work be paired with a grounding in ethics, such as the [DHRI-Ethics](https://github.com/DHRI-Curriculum/ethics) workshop.
-
----
-
-###### The fruit examples on this page come from Andrew Rosenberg 2014 class in Methods in Computational Linguistics.
-
----
 
 [<<< Previous](02-installation.md) | [Next >>>](04-data.md)

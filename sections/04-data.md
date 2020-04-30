@@ -115,7 +115,7 @@ Name: label, dtype: int64
 
 What if we wanted to visualize the information we have about our categories?
 
-We first create a `figure` and `axes` on which to draw our charts using `plt.subplots()`. Each chart is one axes, and a figure can contain multiple axes. This notation will be explained in detail when we discuss [visualization](visualize.md). Our data is encapsulated in `df['label'].value_counts()`, which is itself a DataFrame. We then tell the `pandas` to visualize the DataFrame as a bar chart using `.plot.bar(ax=ax, rot=0)`. The `ax` keyword tells `pandas` which chart in the figure to plot, and the `rot` keyword controls the rotation of the x axis labels.
+We first create a `figure` and `axes` on which to draw our charts using `plt.subplots()`. Each chart is one axes, and a figure can contain multiple axes. This notation is explained in detail in the ["Visualization" appendix](a01-visualize.md). Our data is encapsulated in `df['label'].value_counts()`, which is itself a DataFrame. We then tell the `pandas` to visualize the DataFrame as a bar chart using `.plot.bar(ax=ax, rot=0)`. The `ax` keyword tells `pandas` which chart in the figure to plot, and the `rot` keyword controls the rotation of the x axis labels.
 
 ```python
 fig, ax = plt.subplots()

@@ -2,7 +2,7 @@
 
 # Appendix: Visualizing the Decision Boundary
 
-This appendix walks through the decision boundary visualizations found in the discussion of [supervised_classification](supervised_classification.md)
+This appendix walks through the decision boundary visualizations found in the discussion of [supervised_classification](07-supervised_classification.md)
 
 First we go through the steps of feeding the data into the algorithm because we will need the attributes of the model for the visualization.
 
@@ -98,7 +98,7 @@ The dark gray line in the figure is the decision boundary that the LinearSVC cla
 
 ## Generating a wordcloud from frequencies
 
-This appendix walks through the word cloud visualization found in the discussion of [Bag of Words](bag_of_words.md) feature extraction.
+This appendix walks through the word cloud visualization found in the discussion of [Bag of Words](a03-bag_of_words.md) feature extraction.
 
 `CountVectorizer` computes the frequency of each word in each document. In the Brown corpus, each sentence is fairly short and so it is fairly common for all the words to appear only once. For a word cloud, we want to find a sentence with a variety of frequencies. We convert `tf` to an array because tf is natively a sparse matix, which is not navigable in the same way as other data structures.
 

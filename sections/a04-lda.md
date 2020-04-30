@@ -2,9 +2,6 @@
 
 # Appendix: Topic Modeling with Latent Dirchlet Allocation (LDA)
 
-![diagram showing a collection of texts then an arrow going towards a black box named LDA. On the other side of the black box are two arrows. One is slightly tilted up and points toward three circles. Each circle is a topic and contains a sample of words in that topic. The other arrow is slightly titled down and points towards a document. In the document, words are annotated to indicate which topic they belong to (if any)](images/lda_diagram.png)  
-<cite>inspired by Christine Doig's PyTexas 2015 ["Introduction to Topic Modeling"](http://chdoig.github.io/pytexas2015-topic-modeling/#/) presentation.</cite>
-
 One subset of unsupervised learning tasks are topic extraction tasks, where the aim is to find common groupings of items across collections of items. One method of doing so is _Latent Dirichlet allocation_ (LDA). Latent Dirichlet Allocation is a way to model how topics are distributed over a corpus and words are distributed over a set of topics.
 
 In broad strokes, LDA extracts hidden (latent) topics via the following steps:<sup>1, 2</sup>
@@ -20,9 +17,9 @@ In broad strokes, LDA extracts hidden (latent) topics via the following steps:<s
 
 LDA yields a set of words associated to each topic (see step 4, part 2) and the mixture of topics associated to each document (see step 4, part 1).
 
-<sup>1</sup> [Introduction to Latent Dirichlet Allocation](http://blog.echen.me/2011/08/22/introduction-to-latent-dirichlet-allocation/) by Edward Chen.
+This image, inspired by Christine Doig's PyTexas 2015 ["Introduction to Topic Modeling"](http://chdoig.github.io/pytexas2015-topic-modeling/#/) presentation, can help explain the process:
 
-<sup>2</sup> [The LDA Buffet is Now Open](http://www.matthewjockers.net/2011/09/29/the-lda-buffet-is-now-open-or-latent-dirichlet-allocation-for-english-majors/) by Matthew Jockers.
+![diagram showing a collection of texts then an arrow going towards a black box named LDA. On the other side of the black box are two arrows. One is slightly tilted up and points toward three circles. Each circle is a topic and contains a sample of words in that topic. The other arrow is slightly titled down and points towards a document. In the document, words are annotated to indicate which topic they belong to (if any)](images/lda_diagram.png)  
 
 ## Topic modeling using `sklearn`
 
@@ -52,6 +49,8 @@ Using the `lda` object we set up above, we now apply (`fit`) the LDA algorithm t
 ```python
 lda.fit(tf)
 ```
+
+The result will look something like this:
 
 ```
 LatentDirichletAllocation(batch_size=128, doc_topic_prior=None,
@@ -213,5 +212,13 @@ Since topic modeling works better with longer texts, what topics do you get if y
 2. Pride and Prejudice
 3. Both together?
 4. A contemporary text like The Hunger Games
+
+---
+
+<sup>1</sup> [Introduction to Latent Dirichlet Allocation](http://blog.echen.me/2011/08/22/introduction-to-latent-dirichlet-allocation/) by Edward Chen.
+
+<sup>2</sup> [The LDA Buffet is Now Open](http://www.matthewjockers.net/2011/09/29/the-lda-buffet-is-now-open-or-latent-dirichlet-allocation-for-english-majors/) by Matthew Jockers.
+
+---
 
 [<<< Previous](10-resources.md) | [Back to beginning >>>](../README.md)

@@ -14,6 +14,8 @@ df = pd.read_csv("df_news_romance.csv")
 df.head()
 ```
 
+Our resulting table should look something like this:
+
 |   | label  | sentence | NN | JJ |
 |---|---|---|---|---|
 | **0** | news  |  ['The', 'Fulton', 'County', 'Grand', 'Jury'... | 11 | 2
@@ -22,11 +24,13 @@ df.head()
 | **3** | news  |  ['``', 'Only', 'a', 'relative', 'handful', 'of'... | 9 | 3
 | **4** | news  |  ['The', 'jury', 'said', 'it', 'did', 'find'... | 5 | 3
 
-Then we print the first 5 rows of the _sentence_ column in the spreadsheet:
+Then we print the first 5 rows of the _sentence_ column in the DataFrame:
 
 ```python
 df['sentence'].head()
 ```
+
+We should see this:
 
 ```
 0    ['The', 'Fulton', 'County', 'Grand', 'Jury', '...
