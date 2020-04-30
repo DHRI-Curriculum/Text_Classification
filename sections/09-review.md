@@ -3,6 +3,7 @@
 # Review
 
 At the end of this workshop, we have covered the following skills:
+
 - How to use skills from the NLTK workshop to build features for a classification task
 - How to build a text classification system that can predict whether sentences belong to one category ("news") or another ("romance")
 - How to group data and perform calculations on the aggregations
