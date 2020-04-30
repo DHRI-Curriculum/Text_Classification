@@ -1,4 +1,4 @@
-[<<< Previous](supervised.md) | [Next >>>](review.md)
+[<<< Previous](07-supervised.md) | [Next >>>](09-review.md)
 
 # Unsupervised Machine Learning
 
@@ -30,4 +30,4 @@ Generally speaking, in an unsupervised task there is no existing labeling to com
 ![scikit-learn's algorithm cheat sheet, which depicts a mind-map scheme, which can help you choose an algorithm for classification](../images/algorithms_cheatsheet.png)
 
 
-[<<< Previous](supervised.md) | [Next >>>](review.md)
+[<<< Previous](07-supervised.md) | [Next >>>](09-review.md)

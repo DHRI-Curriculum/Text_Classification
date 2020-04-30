@@ -1,4 +1,4 @@
-[<<< Previous](resources.md) | [Back to beginning >>>](../README.md)
+[<<< Previous](10-resources.md) | [Back to beginning >>>](../README.md)
 
 # Appendix: Visualization
 
@@ -112,4 +112,4 @@ fig.savefig("images/side_by_side.png", bbox_inches = 'tight', pad_inches = 0)
 
 ![Composite image of bar chart comparing the total count of nouns and adjectives in each group (romance and news) next to the jittered scatterplot of individual observations. In the bar chart, the highest value is nouns in news, and this is reflected in the scatter where there are many news dots to the right of the romance dots.](../images/side_by_side.png)
 
-[<<< Previous](resources.md) | [Back to beginning >>>](../README.md)
+[<<< Previous](10-resources.md) | [Back to beginning >>>](../README.md)

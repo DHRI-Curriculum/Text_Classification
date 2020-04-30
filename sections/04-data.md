@@ -1,4 +1,4 @@
-[<<< Previous](classification.md) | [Next >>>](features.md)
+[<<< Previous](03-classification.md) | [Next >>>](05-features.md)
 
 # Getting Our Data
 
@@ -159,4 +159,4 @@ fig.savefig("categories_counts.png", bbox_inches = 'tight', pad_inches = 0)
     
 From the graph it is easy to see that we have slightly more news data than romance data, which we should keep in mind as we go ahead with classification.
 
-[<<< Previous](classification.md) | [Next >>>](features.md)
+[<<< Previous](03-classification.md) | [Next >>>](05-features.md)

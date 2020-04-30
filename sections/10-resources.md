@@ -1,4 +1,4 @@
-[<<< Previous](review.md) | [Back to beginning >>>](../README.md)
+[<<< Previous](09-review.md) | [Back to beginning >>>](../README.md)
 
 # Resources
 
@@ -18,14 +18,14 @@ http://www.scottbot.net/HIAL/index.html@p=19113.html, 07/25/2012
 
 # Appendices
 
-- [Appendix: Visualization](visualize.md)
-- [Appendix: Visualizing the Decision Boundary](decision_boundary.md) 
-- [Appendix: Feature Extraction Using Bag of Words](bag_of_words.md)
-- [Appendix: Topic Modeling with Latent Dirchlet Allocation (LDA)](lda.md)
-- [Appendix: Creating a Word Cloud](word_cloud.md)
+- [Appendix: Visualization](a01-visualize.md)
+- [Appendix: Visualizing the Decision Boundary](a02-decision_boundary.md) 
+- [Appendix: Feature Extraction Using Bag of Words](a03-bag_of_words.md)
+- [Appendix: Topic Modeling with Latent Dirchlet Allocation (LDA)](a04-lda.md)
+- [Appendix: Creating a Word Cloud](a05-word_cloud.md)
 
 
 # Acknowledgments 
 Much gratitude to Kelsey Chatlosh,  Lisa Rhody, and Micheal Grossberg for substantive feedback that worked its way into content.
 
-[<<< Previous](review.md) | [Back to beginning >>>](../README.md)
+[<<< Previous](09-review.md) | [Back to beginning >>>](../README.md)

@@ -1,4 +1,4 @@
-[<<< Previous](data.md) | [Next >>>](supervised.md)
+[<<< Previous](04-data.md) | [Next >>>](06-supervised.md)
 
 # Extracting Features
 
@@ -240,4 +240,4 @@ Pandas provides an easy function to save your DataFrames to your computer as a `
 df.to_csv("df_news_romance.csv", index=False)
 ```
 
-[<<< Previous](data.md) | [Next >>>](supervised.md)
+[<<< Previous](04-data.md) | [Next >>>](06-supervised.md)

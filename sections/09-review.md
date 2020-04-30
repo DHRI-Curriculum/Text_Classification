@@ -1,4 +1,4 @@
-[<<< Previous](unsupervised.md) |  [Next >>>](resources.md)
+[<<< Previous](08-unsupervised.md) |  [Next >>>](10-resources.md)
 
 # Review
 
@@ -11,6 +11,6 @@ At the end of this workshop, we have covered the following skills:
 - How to evaluate the results of machine learning algorithms
 - How to visualize observations, aggregations, and algorithmic results
 
-For further readings, projects, and advice, refer to the [Resources](sections/resources.md) page.
+For further readings, projects, and advice, refer to the [Resources](sections/10-resources.md) page.
 
-[<<< Previous](lda.md) |  [Next >>>](resources.md)
+[<<< Previous](08-lda.md) |  [Next >>>](10-resources.md)

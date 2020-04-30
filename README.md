@@ -17,27 +17,27 @@ This workshop will review key concepts for understanding how machine learning wo
 
 _Much gratitude to Kelsey Chatlosh, Lisa Rhody, and Michael Grossberg for substantive feedback that worked its way into content._
 
-[Get Started >>>](sections/introduction.md)
+[Get Started >>>](sections/01-introduction.md)
 
 -----
 
-[Introduction](sections/introduction.md)  
-[Installation and Setup](sections/installation.md)  
-[What Is Classification?](sections/classification.md)  
-[Getting Our Data](sections/data.md)  
-[Extracting Features](sections/features.md)  
-[Supervised Machine Learning](sections/supervised.md)  
-[Supervised Classification Algorithm with sklearn](sections/supervised_classification.md)  
-[Unsupervised Machine Learning](sections/unsupervised.md)  
-[Review](sections/review.md)  
-[Resources](sections/resources.md)
+[Introduction](sections/01-introduction.md)  
+[Installation and Setup](sections/02-installation.md)  
+[What Is Classification?](sections/03-classification.md)  
+[Getting Our Data](sections/04-data.md)  
+[Extracting Features](sections/05-features.md)  
+[Supervised Machine Learning](sections/06-supervised.md)  
+[Supervised Classification Algorithm with sklearn](sections/07-supervised_classification.md)  
+[Unsupervised Machine Learning](sections/08-unsupervised.md)  
+[Review](sections/09-review.md)  
+[Resources](sections/10-resources.md)
 
 Appendices:
-- [Appendix: Visualization](sections/visualize.md)
-- [Appendix: Visualizing the Decision Boundary](sections/decision_boundary.md) 
-- [Appendix: Feature Extraction Using Bag of Words](sections/bag_of_words.md)
-- [Appendix: Topic Modeling with Latent Dirchlet Allocation (LDA)](sections/lda.md)
-- [Appendix: Creating a Word Cloud](sections/word_cloud.md)
+- [Appendix: Visualization](sections/a01-visualize.md)
+- [Appendix: Visualizing the Decision Boundary](sections/a02-decision_boundary.md) 
+- [Appendix: Feature Extraction Using Bag of Words](sections/a03-bag_of_words.md)
+- [Appendix: Topic Modeling with Latent Dirchlet Allocation (LDA)](sections/a04-lda.md)
+- [Appendix: Creating a Word Cloud](sections/a05-word_cloud.md)
 
 
 -----

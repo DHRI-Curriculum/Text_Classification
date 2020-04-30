@@ -1,4 +1,4 @@
-[<<< Previous](../README.md) | [Next >>>](installation.md)
+[<<< Previous](../README.md) | [Next >>>](02-installation.md)
 
 # Introduction
 
@@ -38,4 +38,4 @@ In this workshop, we are going to learn how to go through the process of doing *
 
 - *classification*: a machine learning task used to predict a class label, which is a choice from a predefined list of possibilities
 
-[<<< Previous](../README.md) | [Next >>>](installation.md)
+[<<< Previous](../README.md) | [Next >>>](02-installation.md)

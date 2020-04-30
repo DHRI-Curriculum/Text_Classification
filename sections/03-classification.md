@@ -1,4 +1,4 @@
-[<<< Previous](installation.md) | [Next >>>](data.md)
+[<<< Previous](02-installation.md) | [Next >>>](04-data.md)
 
 # What Is Classification? 
 
@@ -27,4 +27,4 @@ Our fruit test is an example of a *classification* task.  Classification allows 
 We acknowledge that often times we are not trying to divide apples and oranges, but categories of people or personal attributes. While we are going to focus on the mechanics of machine learning, we strongly recommend that this work be paired with a grounding in ethics, such as the [DHRI-Ethics](https://github.com/DHRI-Curriculum/ethics) workshop.
 
 
-[<<< Previous](installation.md) | [Next >>>](data.md)
+[<<< Previous](02-installation.md) | [Next >>>](04-data.md)
