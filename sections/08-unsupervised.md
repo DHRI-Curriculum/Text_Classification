@@ -1,4 +1,4 @@
-[<<< Previous](07-supervised.md) | [Next >>>](09-review.md)
+[<<< Previous](07-supervised_classification.md) | [Next >>>](09-review.md)
 
 # Unsupervised Machine Learning
 

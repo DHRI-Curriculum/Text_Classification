@@ -106,4 +106,4 @@ The following animated image, borrowed from Andrew Rosenberg, helps us understan
 
 ![An animated image using red, blue, and grey dots to show how decision boundaries change based on distance of grey dot to clusters of red and blue dots](images/croppedml.gif)
 
-[<<< Previous](05-visualize.md) | [Next >>>](07-supervised_classification.md)
+[<<< Previous](05-features.md) | [Next >>>](07-supervised_classification.md)
